@@ -2,10 +2,10 @@ from multiprocessing import Process
 import subprocess
 
 def run_detect_movement():
-    subprocess.run(["python3", "DetectMovement.py"])
+    subprocess.run(["python3", "/home/mylinh/Desktop/raspberry_programming/Movement-Detection/DetectMovement.py"])
 
 def run_web_server():
-    subprocess.run(["python3", "WebServer.py"])
+    subprocess.run(["python3", "/home/mylinh/Desktop/raspberry_programming/Movement-Detection/WebServer.py"])
 
 if __name__ == "__main__":
     p1 = Process(target=run_detect_movement)

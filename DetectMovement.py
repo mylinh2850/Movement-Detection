@@ -31,9 +31,9 @@ LOG_FILE_NAME = CAMERA_FOLDER_PATH + "/photo_logs.txt"
 
 # Setup email
 password = ""
-# with open("/home/pi/.local/share/.email_password", "r") as f:
-#     password = f.read().rstrip()
-password = "vhph uldp slsi vtll"
+with open("/home/mylinh/.local/share/.email_password", "r") as f:
+    password = f.read().rstrip()
+
 yag = yagmail.SMTP("mylinh285002@gmail.com", password)
 print("Email setup OK")
 
@@ -73,7 +73,7 @@ def motion_finished():
             print("Taking a photo and sending it by email")
             photo_file_name = take_photo(camera, CAMERA_FOLDER_PATH)
             update_photo_log_file(LOG_FILE_NAME, photo_file_name)
-            # send_photo_by_email(yag, photo_file_name)
+            send_photo_by_email(yag, photo_file_name)
             
 
 pir.when_motion = motion_detected
