@@ -26,7 +26,7 @@ time_motion_started = time.time()
 last_time_photo_taken = 0
 MOVEMENT_DETECTED_TRESHOLD = 5.0
 MIN_DURATION_BETWEEN_PHOTOS = 30.0
-CAMERA_FOLDER_PATH = "/home/mylinh/Desktop/raspberry_programming/project/photos"
+CAMERA_FOLDER_PATH = "/home/mylinh/Desktop/raspberry_programming/Movement-Detection/photos"
 LOG_FILE_NAME = CAMERA_FOLDER_PATH + "/photo_logs.txt"
 
 # Setup email
@@ -73,7 +73,7 @@ def motion_finished():
             print("Taking a photo and sending it by email")
             photo_file_name = take_photo(camera, CAMERA_FOLDER_PATH)
             update_photo_log_file(LOG_FILE_NAME, photo_file_name)
-            send_photo_by_email(yag, photo_file_name)
+            # send_photo_by_email(yag, photo_file_name)
             
 
 pir.when_motion = motion_detected

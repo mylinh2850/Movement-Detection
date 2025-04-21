@@ -1,7 +1,7 @@
 from flask import Flask
 import os
 
-CAMERA_FOLDER_PATH = "/home/mylinh/Desktop/raspberry_programming/project/photos"
+CAMERA_FOLDER_PATH = "/home/mylinh/Desktop/raspberry_programming/Movement-Detection/photos"
 LOG_FILE_NAME = CAMERA_FOLDER_PATH + "/photo_logs.txt"
 previous_line_counter = 0
 
